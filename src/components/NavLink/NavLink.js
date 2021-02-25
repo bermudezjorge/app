@@ -8,7 +8,7 @@ const NavLink = ({to, text}) => {
   const isActive = () => match ? styles.active : ''
 
   return (
-    <Link to={to} className={isActive()}>
+    <Link to={to} className={`${styles.link} ${isActive()}`}>
       {text}
     </Link>
   )

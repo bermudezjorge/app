@@ -1,3 +1,9 @@
+.link {
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 .active {
-  color:rgb(79, 155, 255);
+  color: var(--main-color);
 }

@@ -6,5 +6,6 @@
   align-items: center;
   position: fixed;
   bottom: 0;
-  border-top: 1px solid whitesmoke;
+  border-top: 1px solid var(--navbar-border-color);
+  background-color: var(--navbar-bg-color);
 }

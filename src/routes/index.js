@@ -1,34 +1,40 @@
-import {Route} from "wouter"
-import loadable from '@loadable/component'
+import {Suspense} from 'react'
+import {Switch, Route} from 'wouter'
+
 import ErrorBoundary from 'components/ErrorBoundary'
+import progressImport from './progressimport'
+import FallBack from 'components/Fallback'
 
-const Loading = () => <div>Loading...</div>
-
-const Home = loadable(() =>
-  import(/* webpackPrefetch: true */ './files/Home'),
-  {
-    fallback: Loading(),
-  }
-)
-const Search = loadable(() =>
-  import(/* webpackPrefetch: true */ './files/Search'),
-  {
-    fallback: Loading(),
-  }
-)
-const Me = loadable(() =>
-  import(/* webpackPrefetch: true */ './files/Me'),
-  {
-    fallback: Loading(),
-  }
+const Home = progressImport(
+  import("./routesComponents/Home")
 )
 
-const Routes = () => (
-  <ErrorBoundary>
-    <Route path="/" component={Home} />
-    <Route path="/search" component={Search} />
-    <Route path="/me" component={Me} />
-  </ErrorBoundary>
+const Search = progressImport(
+  import("./routesComponents/Search")
 )
+
+const Me = progressImport(
+  import("./routesComponents/Me")
+)
+
+const Routes = () => {  
+  return (
+    <ErrorBoundary>
+      <Suspense fallback={<FallBack type="loading" />}>
+        <Switch>
+
+          <Route path="/" component={Home} />
+          <Route path="/search" component={Search} />
+          <Route path="/me" component={Me} />
+
+          <Route path="/:rest*">
+            {({rest}) => <FallBack type="notFound" page={rest} />}
+          </Route>
+          
+        </Switch>
+      </Suspense>
+    </ErrorBoundary>
+  )
+}
 
 export default Routes
