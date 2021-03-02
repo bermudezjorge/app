@@ -2,6 +2,9 @@
   --main-color: #10bbff;
   --background-color: #fff;
   
+  --border-product-color: rgba(28, 98, 100, 0.3);
+
+  --navbar-height: 50px;
   --navbar-border-color: rgba(38, 82, 95, 0.3);
   --navbar-bg-color: #fff;
 }
@@ -19,4 +22,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
+  overflow-y: scroll;
 }

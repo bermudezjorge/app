@@ -1,1 +1,1 @@
-export { default } from './FallBack'
+export {default} from './FallBack'
