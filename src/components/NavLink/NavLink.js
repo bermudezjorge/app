@@ -1,6 +1,6 @@
 import {Link, useRoute} from 'wouter'
 
-import styles from './styles.module.css'
+import styles from './style.module.css'
 
 const NavLink = ({to, text}) => {
   const [match] = useRoute(to)

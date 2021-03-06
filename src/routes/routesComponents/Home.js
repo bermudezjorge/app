@@ -3,9 +3,12 @@ import ProductCard from 'views/ProductCard'
 
 const Home = () => {
   return (
-    <ProductContainer>
+    <ProductContainer showingIn="home">
       {Array(20).fill("").map((_, i) => (
-        <ProductCard key={i} />
+        <ProductCard
+          productId={i+1}
+          key={i}
+        />
       ))}
     </ProductContainer>
   )

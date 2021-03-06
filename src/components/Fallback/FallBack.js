@@ -2,7 +2,7 @@ import loadingImg from 'assets/img/fallback/Online_shopping_SVG.svg'
 import notFoundImg from 'assets/img/fallback/Error_404_SVG.svg'
 import errorPageImg from 'assets/img/fallback/Error_notification_SVG.svg'
 
-import styles from './styles.module.css'
+import styles from './style.module.css'
 
 const IMG_TYPE = {
   loading: loadingImg,

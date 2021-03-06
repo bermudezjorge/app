@@ -1,0 +1,73 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  padding-top: 2rem;
+}
+
+.storeHeader {
+  width: 100%;
+  display: flex;
+}
+
+.storePhotoName {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.storeName {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.storePhoto {
+  width: 190px;
+  margin-top: 1rem;
+  border-radius: var(--border-radius-style);
+}
+
+
+
+
+.storeData {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3rem;
+}
+
+.infoData {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoData li {
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+}
+
+.description {
+  width: 100%;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+
+
+.promotions {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.promotionPicture {
+  width: 55px;
+  height: 55px;
+  margin-right: 1.5rem;
+}
+
+.promotionPicture img {
+  width: 100%;
+  border-radius: var(--border-radius-style);
+}

@@ -1,0 +1,30 @@
+.productInfo {
+  width: 100%;
+  height: 1.7rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  background-color: rgba(88, 116, 139, 0.26);
+  backdrop-filter: blur(3px);
+}
+
+.name {
+  width: 85%;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 0.7rem;
+  color: rgb(255, 255, 255);
+}
+
+.price {
+  width: auto;
+  font-weight: 900;
+  font-size: 0.7rem;
+  color: #fff;
+  padding: 0.07rem 0.3rem;
+  border-radius: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.123);
+}

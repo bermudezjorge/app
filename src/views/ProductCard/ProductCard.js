@@ -1,12 +1,24 @@
-import styles from './styles.module.css'
+import ProductStore from 'components/ProductStore'
+import ProductImageLink from 'components/ProductImage'
+import ProductDetails from 'components/ProductDetails'
 
-const ProductCard = () => (
+import styles from './style.module.css'
+
+const ProductCard = ({productId, showingIn}) => (
   <div className={styles.container}>
-    <img className={styles.product} src="https://www.makobitelog.com/_exports/6-large_default/krave-de-kellogs-flips.jpg" alt="producto"/>
-      <div className={styles.productInfo}>
-        <h1>Producto</h1>
-        <h2>$3</h2>
-      </div>
+    <ProductStore
+      storeName={1}
+      showingIn={showingIn}
+      src="https://i.pinimg.com/originals/49/53/32/4953325535c4a87652ef6d15725da400.png"
+    />
+    <ProductImageLink
+      productId={productId}
+      src="https://picsum.photos/200"
+    />
+    <ProductDetails
+      text="Product name details balbla bblalbla bla blabla bla ballablalba"
+      price="2.30"
+    />
   </div>
 )
 

@@ -3,10 +3,10 @@ import NavBar from 'views/NavBar'
 
 const App = () => {
   return (
-    <div>
+    <>
       <Routes />
       <NavBar />
-    </div>
+    </>
   )
 }
 

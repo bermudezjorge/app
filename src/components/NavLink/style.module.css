@@ -1,0 +1,11 @@
+.link {
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.active {
+  color: rgb(255, 238, 0);
+}

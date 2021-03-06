@@ -1,0 +1,17 @@
+.container {
+  width: 95%;
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 2.5%;
+  bottom: 1%;
+  border-radius: var(--border-radius-style);
+
+  background: #6190E8;
+  background: -webkit-linear-gradient(to right, #a7bfe8b7, #6190b7);
+  background: linear-gradient(to right, #a7bfe8b7, #6190e8b7);
+
+  backdrop-filter: blur(10px) saturate(180%);
+}
