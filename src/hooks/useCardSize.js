@@ -1,22 +1,34 @@
 import {useState, useEffect} from 'react'
 
-const useCardSize = (page) => {
+import {BREAKPOINTS} from 'constants/breakpoints'
+
+const useCardSize = () => {
   const [size, setSize] = useState({width: 0, height: 0})
 
-  const horizontalPadding = 32
+  const horizontalPadding = 48
 
   useEffect(() => {
-    const updateWindowDimensions = () => {
-      const halfScreenSize = window.innerWidth / 2
+    const updateSize = () => {
+      const screenSize = window.innerWidth
+      const halfScreenSize = screenSize / 2
       const cardSize = halfScreenSize - horizontalPadding
+
+      // const getObjKey = obj => Object.keys(obj)[0]
+
+      for(let i = 0; BREAKPOINTS.length - 1 > i; i++) {
+        if(BREAKPOINTS[i] < screenSize) {
+          console.log(BREAKPOINTS[i])
+          break;
+        }
+      }
 
       setSize({width: cardSize, height: cardSize})
     }
-    updateWindowDimensions()
+    updateSize()
 
-    window.addEventListener("resize", updateWindowDimensions)
+    window.addEventListener("resize", updateSize)
 
-    return () => window.removeEventListener("resize", updateWindowDimensions)
+    return () => window.removeEventListener("resize", updateSize)
   }, [horizontalPadding])
 
   return size

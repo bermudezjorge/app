@@ -1,47 +1,17 @@
+import useModifyText from 'hooks/useModifyText'
+
 import styles from './style.module.css'
 
-const ProductDetails = ({text, price}) => {
-
-  const textLength = text.length
-  const priceLength = price.length
-
-  const dinamicFontSize = () => {
-    if(textLength < 10) {
-      return {fontSize: '0.8rem'}
-
-    } else if(textLength > 20) {
-      return {fontSize: '0.6rem'}
-
-    } else if(textLength > 30) {
-      return {fontSize: '0.4rem'}
-
-    }
-  }
-
-  const modifyTextByLength = () => {
-    const maxTextLength = 40
-
-    if(textLength > maxTextLength) {
-      return text.substr(0, maxTextLength) + '...'
-    } else {
-      return text
-    }
-  }
-
-  const dinamicWidth = () => {
-    if(priceLength > 3) {
-      return {width: '80%'}
-    }
-  }
+const ProductDetails = ({text, price, size}) => {
+  const textMod = useModifyText(text, size)
 
   return (
     <div className={styles.productInfo}>
       <h1
         className={styles.name}
-        style={{...dinamicFontSize(), ...dinamicWidth()}}
         title={text}
       >
-        {modifyTextByLength()}
+        {textMod}
       </h1>
       <h2 className={styles.price}>
         {'$' + price}

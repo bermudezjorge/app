@@ -5,9 +5,9 @@ import useCardSize from 'hooks/useCardSize'
 import styles from './style.module.css'
 
 const ProductContainer = ({showingIn, children}) => {
-  const size = useCardSize(showingIn)
+  const size = useCardSize()
 
-  const marginTop = showingIn === 'home' ? {marginTop: '0'} : {marginTop: '2rem'}
+  const marginTop = showingIn === 'home' ? {marginTop: '0'} : {marginTop: '3rem'}
 
   return (
     <div

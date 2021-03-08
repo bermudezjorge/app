@@ -21,6 +21,7 @@ const ProductCard = ({productId, showingIn, size, marginTop}) => (
     <ProductDetails
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit"
       price="2.30"
+      size={size}
     />
   </div>
 )
