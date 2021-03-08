@@ -1,17 +1,21 @@
 import {useState, useEffect} from 'react'
 
-const useModifyText = (text, size) => {
+const maxLength = 25
+
+const useModifyText = (text) => {
   const [textMod, setTextMod] = useState(text)
 
   useEffect(() => {
     const textLength = text.length
-    const containerWidth = size.width
-    const maxLengthByWidth = Math.floor(containerWidth / 6)
-  
-    if(textLength > maxLengthByWidth) 
-      setTextMod(text.substr(0, maxLengthByWidth) + '...')
-      
-  }, [text, size])
+    console.log(textLength)
+
+    if(textLength > maxLength) {
+      setTextMod(text.substr(0, maxLength) + '...')
+    } else {
+      setTextMod(text)
+    }
+
+  }, [text])
 
   return textMod
 }

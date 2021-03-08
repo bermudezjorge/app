@@ -4,10 +4,9 @@ import ProductDetails from 'components/ProductDetails'
 
 import styles from './style.module.css'
 
-const ProductCard = ({productId, showingIn, size, marginTop}) => (
+const ProductCard = ({productId, showingIn}) => (
   <div
     className={styles.container}
-    style={{...size, ...marginTop}}
   >
     <ProductStore
       storeName={1}
@@ -21,7 +20,6 @@ const ProductCard = ({productId, showingIn, size, marginTop}) => (
     <ProductDetails
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit"
       price="2.30"
-      size={size}
     />
   </div>
 )

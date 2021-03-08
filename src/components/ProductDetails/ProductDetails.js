@@ -2,8 +2,8 @@ import useModifyText from 'hooks/useModifyText'
 
 import styles from './style.module.css'
 
-const ProductDetails = ({text, price, size}) => {
-  const textMod = useModifyText(text, size)
+const ProductDetails = ({text, price}) => {
+  const textMod = useModifyText(text)
 
   return (
     <div className={styles.productInfo}>

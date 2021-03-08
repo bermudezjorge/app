@@ -1,7 +1,29 @@
 .container {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   position: relative;
   border-radius: var(--border-radius-style);
   overflow: hidden;
+  margin-top: 3rem;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 770px) {
+  .container {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 200px;
+    height: 200px;
+  }
 }
