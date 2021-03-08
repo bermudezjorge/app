@@ -1,19 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import { Provider } from 'react-redux'
+import { Provider } from 'react-redux'
+// import reportWebVitals from './reportWebVitals';
 
-// import store from './store'
+import store from './store'
 
 import App from './App'
 
 import './assets/css/index.css'
-// import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
       <App />
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>,
   document.getElementById('app')
 )

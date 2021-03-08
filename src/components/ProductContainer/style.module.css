@@ -1,8 +1,5 @@
 .container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 3rem 0;
-  padding: 3rem 0;
-  justify-items: center;
-  padding-bottom: calc(var(--navbar-height) + 3rem);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
 }

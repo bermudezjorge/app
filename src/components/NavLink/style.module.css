@@ -1,5 +1,5 @@
 .link {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.89);
   font-weight: 900;
   text-decoration: none;
   font-size: 1rem;
@@ -7,5 +7,10 @@
 }
 
 .active {
-  color: rgb(255, 238, 0);
+  background: -webkit-linear-gradient(rgb(0, 153, 255), rgb(0, 255, 242));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  color: rgb(52, 214, 243);
 }

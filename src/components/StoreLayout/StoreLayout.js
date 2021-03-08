@@ -8,8 +8,8 @@ const StoreLayout = () => (
     <div className={styles.storeHeader}>
 
       <div className={styles.storePhotoName}>
-        <h1 className={styles.storeName}>Nombre Tienda</h1>
         <img className={styles.storePhoto} src="https://picsum.photos/200" alt="tienda logo"/>
+        <h1 className={styles.storeName}>Nombre Tienda</h1>
       </div>
 
       <div className={styles.storeData}>
@@ -30,6 +30,12 @@ const StoreLayout = () => (
     </div>
 
     <ul className={styles.promotions}>
+      <li className={styles.promotionPicture}>
+        <img src="https://picsum.photos/200" alt="promocion"/>
+      </li>
+      <li className={styles.promotionPicture}>
+        <img src="https://picsum.photos/200" alt="promocion"/>
+      </li>
       <li className={styles.promotionPicture}>
         <img src="https://picsum.photos/200" alt="promocion"/>
       </li>

@@ -7,19 +7,19 @@ const ProductDetails = ({text, price}) => {
 
   const dinamicFontSize = () => {
     if(textLength < 10) {
-
       return {fontSize: '0.8rem'}
+
     } else if(textLength > 20) {
-
       return {fontSize: '0.6rem'}
-    } else if(textLength > 30) {
 
+    } else if(textLength > 30) {
       return {fontSize: '0.4rem'}
+
     }
   }
 
   const modifyTextByLength = () => {
-    const maxTextLength = 56
+    const maxTextLength = 40
 
     if(textLength > maxTextLength) {
       return text.substr(0, maxTextLength) + '...'
@@ -28,7 +28,7 @@ const ProductDetails = ({text, price}) => {
     }
   }
 
-  const dinamicWidth = (container) => {
+  const dinamicWidth = () => {
     if(priceLength > 3) {
       return {width: '80%'}
     }

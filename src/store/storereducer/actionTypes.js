@@ -1,0 +1,1 @@
+export const SET_STORE_PIC = "SET_STORE_PIC"

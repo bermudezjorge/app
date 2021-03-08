@@ -9,9 +9,7 @@
   bottom: 1%;
   border-radius: var(--border-radius-style);
 
-  background: #6190E8;
-  background: -webkit-linear-gradient(to right, #a7bfe8b7, #6190b7);
-  background: linear-gradient(to right, #a7bfe8b7, #6190e8b7);
+  background: #27384e85;
 
   backdrop-filter: blur(10px) saturate(180%);
 }

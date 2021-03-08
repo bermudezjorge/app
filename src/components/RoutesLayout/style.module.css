@@ -1,0 +1,4 @@
+.layout {
+  padding: 3rem 1.5rem;
+  padding-bottom: calc(var(--navbar-height) + 3rem);
+}

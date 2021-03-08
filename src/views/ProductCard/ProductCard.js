@@ -4,8 +4,11 @@ import ProductDetails from 'components/ProductDetails'
 
 import styles from './style.module.css'
 
-const ProductCard = ({productId, showingIn}) => (
-  <div className={styles.container}>
+const ProductCard = ({productId, showingIn, size, marginTop}) => (
+  <div
+    className={styles.container}
+    style={{...size, ...marginTop}}
+  >
     <ProductStore
       storeName={1}
       showingIn={showingIn}
@@ -16,7 +19,7 @@ const ProductCard = ({productId, showingIn}) => (
       src="https://picsum.photos/200"
     />
     <ProductDetails
-      text="Product name details balbla bblalbla bla blabla bla ballablalba"
+      text="Lorem ipsum dolor sit amet consectetur adipisicing elit"
       price="2.30"
     />
   </div>
