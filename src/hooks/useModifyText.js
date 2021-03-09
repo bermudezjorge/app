@@ -6,10 +6,7 @@ const useModifyText = (text) => {
   const [textMod, setTextMod] = useState(text)
 
   useEffect(() => {
-    const textLength = text.length
-    console.log(textLength)
-
-    if(textLength > maxLength) {
+    if(text.length > maxLength) {
       setTextMod(text.substr(0, maxLength) + '...')
     } else {
       setTextMod(text)

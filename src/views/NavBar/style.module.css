@@ -8,8 +8,5 @@
   left: 2.5%;
   bottom: 1%;
   border-radius: var(--border-radius-style);
-
-  background: #27384e85;
-
-  backdrop-filter: blur(10px) saturate(180%);
+  background: var(--main-bg-color);
 }
