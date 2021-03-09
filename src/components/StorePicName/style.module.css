@@ -1,0 +1,9 @@
+.picture {
+  width: 170px;
+  border-radius: var(--border-radius-style);
+}
+
+.name {
+  font-size: 2rem;
+  text-align: center;
+}

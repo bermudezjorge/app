@@ -1,0 +1,15 @@
+.infoData {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoData li {
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+}
+
+.description {
+  width: 100%;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
