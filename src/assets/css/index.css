@@ -1,10 +1,11 @@
 :root {
-  --main-color: #10bbff;
+  --main-color: rgb(0, 183, 255);
+
   --background-color: #fff;
   
-  --navbar-height: 3rem;
+  --navbar-height: 2.5rem;
 
-  --main-bg-color: #27384eb2;
+  --navbar-bg: rgba(0, 0, 0, 0.226);
 
   --border-radius-style: 0.4rem 0.4rem 0.7rem 0.7rem;
 }

@@ -18,3 +18,9 @@
   margin-top: 1rem;
   text-align: center;
 }
+
+@media (min-width: 650px) {
+  .img {
+    width: 250px;
+  }
+}

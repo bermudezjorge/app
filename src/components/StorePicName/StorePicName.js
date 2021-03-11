@@ -1,12 +1,18 @@
+import {connect} from 'react-redux'
+
+import {getPic} from 'store/storereducer/selectors'
+
 import styles from './style.module.css'
 
-const StorePicName = ({storePic, storeName}) => {
+const StorePicName = ({pic}) => {
   return (
     <>
-      <img className={styles.picture} src={storePic} alt="tienda logo"/>
-      <h1 className={styles.name}>{storeName}</h1>
+      <img className={styles.picture} src={pic} alt="tienda logo"/>
+      <h1 className={styles.name}>Nombre Tienda</h1>
     </>
   )
 }
 
-export default StorePicName
+const mapStateToProps = state => getPic(state)
+
+export default connect(mapStateToProps)(StorePicName)

@@ -1,1 +1,1 @@
-export const getPic = store => store.storePic;
+export const getPic = state => ({pic: state.storePic})

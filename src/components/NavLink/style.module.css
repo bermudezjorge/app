@@ -1,16 +1,31 @@
 .link {
+  width: 30px;
+  height: 30px;
   color: rgba(255, 255, 255, 0.89);
   font-weight: 900;
   text-decoration: none;
   font-size: 1rem;
   line-height: 1rem;
+  position: relative;
+  cursor: pointer;
 }
 
-.active {
-  background: -webkit-linear-gradient(rgb(0, 153, 255), rgb(0, 255, 242));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  color: rgb(52, 214, 243);
+.active::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 5px;
+  bottom: -30px;
+  box-shadow: 0px 0 20px 10px var(--main-color);
+  z-index: -1;
+}
+
+.icon {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.img {
+  width: 30px;
 }

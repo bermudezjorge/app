@@ -5,8 +5,8 @@ import styles from './style.module.css'
 const StorePromotions = () => {
   return (
     <ul className={styles.container}>
-      {Array(5).fill("").map(() => (
-        <Promotion />
+      {Array(5).fill("").map((_, i) => (
+        <Promotion key={i} />
       ))}
     </ul>
   )

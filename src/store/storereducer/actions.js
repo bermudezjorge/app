@@ -1,18 +1,8 @@
-import { SET_STORE_PHOTO } from "./actionTypes";
+import { SET_STORE_PIC } from "./actionTypes";
 
-let nextTodoId = 0;
-
-export const addTodo = content => ({
-  type: ADD_TODO,
+export const setStorePic = pic => ({
+  type: SET_STORE_PIC,
   payload: {
-    id: ++nextTodoId,
-    content
+    storePic: pic,
   }
-});
-
-export const toggleTodo = id => ({
-  type: TOGGLE_TODO,
-  payload: { id }
-});
-
-export const setFilter = filter => ({ type: SET_FILTER, payload: { filter } });
+})
