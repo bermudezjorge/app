@@ -1,20 +1,20 @@
-import ProductStore from 'components/ProductStore'
-import ProductImageLink from 'components/ProductImage'
+import Image from 'components/Image'
 import ProductDetails from 'components/ProductDetails'
 
 import styles from './style.module.css'
 
-const ProductCard = ({productId, showingIn}) => (
+const ProductCard = ({showStore, resourceId}) => (
   <div
     className={styles.container}
   >
-    <ProductStore
-      storeName={1}
-      showingIn={showingIn}
-      src="https://i.pinimg.com/originals/49/53/32/4953325535c4a87652ef6d15725da400.png"
+    <Image
+      resourceId={1}
+      type={showStore ? 'storeimage' : 'hide'}
+      src="https://picsum.photos/200"
     />
-    <ProductImageLink
-      productId={productId}
+    <Image
+      resourceId={resourceId}
+      type="productimage"
       src="https://picsum.photos/200"
     />
     <ProductDetails

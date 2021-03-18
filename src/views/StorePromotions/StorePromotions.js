@@ -1,4 +1,4 @@
-import Promotion from 'components/Promotion'
+import Image from 'components/Image'
 
 import styles from './style.module.css'
 
@@ -6,7 +6,10 @@ const StorePromotions = () => {
   return (
     <ul className={styles.container}>
       {Array(5).fill("").map((_, i) => (
-        <Promotion key={i} />
+        <Image
+        	type="promotion"
+        	key={i}
+        />
       ))}
     </ul>
   )

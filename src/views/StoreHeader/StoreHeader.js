@@ -1,4 +1,4 @@
-import StorePicName from 'components/StorePicName'
+import Image from 'components/Image'
 import StoreInfo from 'views/StoreInfo'
 
 import styles from './style.module.css'
@@ -7,7 +7,9 @@ const StorePresentation = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.containerPicName}>
-        <StorePicName />
+        <Image
+          type="storepic"
+        />
       </div>
 
       <div className={styles.containerData}>

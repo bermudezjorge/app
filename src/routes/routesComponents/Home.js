@@ -5,10 +5,11 @@ const Home = () => {
   return (
     <>
       <h1>Inicio</h1>
-      <ProductContainer showingIn="home">
+      <ProductContainer>
         {Array(20).fill("").map((_, i) => (
           <ProductCard
-            productId={i+1}
+            showStore={true}
+            resourceId={i+1}
             key={i}
           />
         ))}

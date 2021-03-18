@@ -1,13 +1,9 @@
-import {cloneElement} from 'react'
-
 import styles from './style.module.css'
 
-const ProductContainer = ({showingIn, children}) => {
+const ProductContainer = ({children}) => {
   return (
     <div className={styles.container}>
-      {children.map((child) => (
-        cloneElement(child, {showingIn})
-      ))}
+      {children}
     </div>
   )
 }

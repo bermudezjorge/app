@@ -15,10 +15,11 @@ const StorePage = () => {
       <StoreHeader />
       <StorePromotions />
 
-      <ProductContainer showingIn="store">
+      <ProductContainer>
         {Array(12).fill("").map((_, i) => (
           <ProductCard
-            productId={i+1}
+            showStore={false}
+            resourceId={i+1}
             key={i}
           />
         ))}
