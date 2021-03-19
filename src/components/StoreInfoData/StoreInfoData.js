@@ -7,12 +7,11 @@ const LI = ({emoji, text, link}) => (
     </span>
     {link ? (
       <a
-        className={styles.link}
         href="https://www.google.com/maps/dir/10.4853365,-66.8995901/10.4853998,-66.8999978/@10.4821821,-66.891243,16z"
         target="_blank"
         rel="noreferrer"
       >
-        <h3 className={styles.text}>{text}</h3>
+        <h3 className={`${styles.text} ${styles.link}`}>{text}</h3>
       </a>
     ) : (
       <h3 className={styles.text}>{text}</h3>

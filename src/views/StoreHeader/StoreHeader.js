@@ -3,13 +3,14 @@ import StoreInfo from 'views/StoreInfo'
 
 import styles from './style.module.css'
 
-const StorePresentation = () => {
+const StoreHeader = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.containerPicName}>
         <Image
           type="storepic"
         />
+        <h1 className={styles.name}>Nombre Tienda</h1>
       </div>
 
       <div className={styles.containerData}>
@@ -19,4 +20,4 @@ const StorePresentation = () => {
   )
 }
 
-export default StorePresentation
+export default StoreHeader

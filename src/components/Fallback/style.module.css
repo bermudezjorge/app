@@ -17,6 +17,7 @@
   font-size: 12px;
   margin-top: 1rem;
   text-align: center;
+  color: var(--text-color);
 }
 
 @media (min-width: 650px) {

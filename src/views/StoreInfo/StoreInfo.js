@@ -1,5 +1,4 @@
 import StoreInfoData from 'components/StoreInfoData'
-import StoreDescription from 'components/StoreDescription'
 
 import styles from './style.module.css'
 
@@ -21,11 +20,11 @@ const StoreInfo = () => {
         />
       </ul>
 
-      <StoreDescription
-        text={`Lorem ipsum dolor sit amet consectetur adipisicing
+      <p className={styles.description}>
+        Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Saepe cumque sapiente et exercitationem
-        aspernatur quo sunt aut nesciunt iusto consequuntur`}
-      />
+        aspernatur quo sunt aut nesciunt iusto consequuntur.
+      </p>
     </>
   )
 }

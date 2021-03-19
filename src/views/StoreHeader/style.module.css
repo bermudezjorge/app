@@ -11,6 +11,12 @@
   align-items: center;
 }
 
+.name {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
 .containerData {
   width: 100%;
   display: flex;

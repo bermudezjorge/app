@@ -4,7 +4,7 @@ import ProductCard from 'views/ProductCard'
 const Home = () => {
   return (
     <>
-      <h1>Inicio</h1>
+      <h1 style={{color:'#fff'}}>Inicio</h1>
       <ProductContainer>
         {Array(20).fill("").map((_, i) => (
           <ProductCard

@@ -1,0 +1,10 @@
+.link {
+	width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+	background: whitesmoke;
+	margin-top: 0.3rem;
+	cursor: default;
+	color: var(--text-color);
+	background: var(--background-color);
+}
