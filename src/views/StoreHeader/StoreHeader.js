@@ -10,7 +10,7 @@ const StoreHeader = () => {
         <Image
           type="storepic"
         />
-        <h1 className={styles.name}>Nombre Tienda</h1>
+        <h1 className={styles.name}>@storename1</h1>
       </div>
 
       <div className={styles.containerData}>

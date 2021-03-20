@@ -1,26 +1,37 @@
+import {useRoute} from 'wouter'
+
 import Image from 'components/Image'
-import ProductDetails from 'components/ProductDetails'
 import StoreLink from 'components/StoreLink'
 
 import styles from './style.module.css'
 
-const ProductCard = ({resourceId}) => (
-  <div className={styles.container}>
-    <Image
-      resourceId={resourceId}
-      type="productimage"
-      src="https://picsum.photos/200"
-    />
+const ProductCard = ({resourceId}) => {
+  const [match] = useRoute('/tienda/:name')
 
-    <div className={styles.infoContainer}>
-      <ProductDetails
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit"
-        price="2.30"
+  return (
+    <div className={styles.container}>
+      <Image
+        resourceId={resourceId}
+        type="productimage"
+        src="https://picsum.photos/200"
       />
 
-      <StoreLink name="store" />
+      <div
+        className={`
+          ${styles.infoContainer}
+          ${match ? styles.fullWidth : styles.halfWidth}
+        `}
+      >
+        <h2 className={styles.price}>
+          $2.40
+        </h2>
+        <StoreLink
+          isStoreLinkHidden={match}
+          name="Tienda Chaqueta C.A"
+        />
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default ProductCard

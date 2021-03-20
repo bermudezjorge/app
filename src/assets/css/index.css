@@ -1,15 +1,11 @@
 :root {
-  --main-color: rgb(0, 183, 255);
-
-  --background-color: #000;
-
+  --main-color: #0095f6;
+  --background-color: #fafafa;
   --elements-bg: #fff;
-
-  --text-color: #fff;
-
-  --text2-color: #000;
-
+  --text-color: #262626;
   --navbar-height: 2.5rem;
+  --border-color: #dbdbdb;
+  --skeleton-background-color: #efefef;
 }
 
 * {

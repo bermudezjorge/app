@@ -2,17 +2,19 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 5rem;
+  padding-bottom: 3rem;
 }
 
 .containerPicName {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
 .name {
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
   color: var(--text-color);
 }

@@ -1,17 +1,18 @@
-import {Link, useRoute} from 'wouter'
+import {Link} from 'wouter'
 
 import styles from './style.module.css'
 
-const StoreLink = ({name}) => {
-  const [match] = useRoute('/tienda/:name')
+const StoreLink = ({isStoreLinkHidden, name}) => {
 
-  console.log(match)
-
-  if(match) return null
+  if(isStoreLinkHidden) return null
 
 	return (
 		<Link to="/tienda/1">
-      <h1 className={styles.link}>{name}</h1>
+			<img
+      	className={styles.store}
+      	src="https://picsum.photos/200"
+      	alt="tienda logo"
+      />				
     </Link>
 	)
 }

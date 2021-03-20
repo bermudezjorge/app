@@ -22,8 +22,7 @@ const StoreInfo = () => {
 
       <p className={styles.description}>
         Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Saepe cumque sapiente et exercitationem
-        aspernatur quo sunt aut nesciunt iusto consequuntur.
+        elit. Saepe cumque. xd xd xd.
       </p>
     </>
   )

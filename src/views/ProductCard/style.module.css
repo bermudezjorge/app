@@ -1,33 +1,28 @@
 .container {
-  width: 170px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
 }
 
 .infoContainer {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.3rem;
+  padding: 0.2rem;
   background: var(--elements-bg);
 }
 
-@media (max-width: 576px) {
-  .container {
-    width: 140px;
-  }
+.fullWidth {
+  grid-template-columns: 100%;
 }
 
-@media (min-width: 770px) {
-  .container {
-    width: 180px;
-  }
+.halfWidth {
+  grid-template-columns: 60% 37%;
 }
 
-@media (min-width: 900px) {
-  .container {
-    width: 200px;
-  }
+.price {
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: var(--text2-color);
 }

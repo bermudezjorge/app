@@ -1,8 +1,8 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
-  padding-bottom: calc(3rem + --navbar-height);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.3rem;
+  padding-bottom: calc(var(--navbar-height) + 1rem);
 }
 
 @media (max-width: 320px) {

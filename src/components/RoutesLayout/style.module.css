@@ -2,6 +2,4 @@
   width: 100%;
   max-width: 992px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
-  padding-bottom: calc(var(--navbar-height) + 3rem);
 }
