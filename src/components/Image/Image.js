@@ -12,7 +12,7 @@ const Image = ({src, resourceId, type}) => {
 		return (
 		  <Link to={`/producto/${resourceId}`}>
 		    <img
-		      className={styles.product}
+		      className={styles.productImage}
 		      src={src}
 		      alt="producto"
 		    />
@@ -22,19 +22,11 @@ const Image = ({src, resourceId, type}) => {
 
 	if(type === "storepic") {
 		return (
-      <img className={styles.picture} src="https://picsum.photos/200" alt="tienda logo"/>
-		)
-	}
-
-	if(type === "promotion") {
-		return (
-			<li className={styles.container}>
-	      <img
-	        className={styles.promotionPic}
-	        src="https://picsum.photos/200"
-	        alt="promocion"
-	      />
-	    </li>
+      <img
+      	className={styles.storeImage}
+      	src="https://picsum.photos/200"
+      	alt="tienda logo"
+      />
 		)
 	}
 }

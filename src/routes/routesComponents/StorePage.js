@@ -1,14 +1,13 @@
-import StoreLayout from 'components/StoreLayout'
+import Layout from 'components/Layout'
 import StoreHeader from 'views/StoreHeader'
-import ProductContainer from 'components/ProductContainer'
 import ProductCard from 'views/ProductCard'
 
 
 const StorePage = () => (
-  <StoreLayout>
+  <Layout type="store">
     <StoreHeader />
 
-    <ProductContainer>
+    <Layout type="product">
       {Array(12).fill("").map((_, i) => (
         <ProductCard
           showStore={false}
@@ -16,8 +15,8 @@ const StorePage = () => (
           key={i}
         />
       ))}
-    </ProductContainer>
-  </StoreLayout>
+    </Layout>
+  </Layout>
 )
 
 export default StorePage

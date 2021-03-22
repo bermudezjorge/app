@@ -1,7 +1,7 @@
 import {useRoute} from 'wouter'
 
 import Image from 'components/Image'
-import StoreLink from 'components/StoreLink'
+import ContentLink from 'components/ContentLink'
 
 import styles from './style.module.css'
 
@@ -25,9 +25,10 @@ const ProductCard = ({resourceId}) => {
         <h2 className={styles.price}>
           $2.40
         </h2>
-        <StoreLink
-          isStoreLinkHidden={match}
-          name="Tienda Chaqueta C.A"
+        <ContentLink
+          shown={match}
+          to="/tienda/1"
+          image="https://picsum.photos/200"
         />
       </div>
     </div>

@@ -1,9 +1,9 @@
-import ProductContainer from 'components/ProductContainer'
+import Layout from 'components/Layout'
 import ProductCard from 'views/ProductCard'
 
 const Home = () => {
   return (
-    <ProductContainer>
+    <Layout type="product">
       {Array(20).fill("").map((_, i) => (
         <ProductCard
           showStore={true}
@@ -11,7 +11,7 @@ const Home = () => {
           key={i}
         />
       ))}
-    </ProductContainer>
+    </Layout>
   )
 }
 

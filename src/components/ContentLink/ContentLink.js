@@ -2,10 +2,12 @@ import {Link, useRoute} from 'wouter'
 
 import styles from './style.module.css'
 
-const NavLink = ({to, icon, profilePic}) => {
+const NavLink = ({shown, to, icon, image}) => {
   const [match] = useRoute(to)
 
   const isActive = () => match ? styles.active : ''
+
+  if(shown) return null
 
   return (
     <Link to={to}>
@@ -17,7 +19,7 @@ const NavLink = ({to, icon, profilePic}) => {
         </span>
       ) : (
         <div className={`${styles.link} ${isActive()}`}>
-          <img className={styles.img} src={profilePic} alt="profile" /> 
+          <img className={styles.img} src={image} alt="profile" /> 
         </div>
       )}
     </Link>
