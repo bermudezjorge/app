@@ -1,10 +1,12 @@
 import Image from 'components/Image'
 import StoreInfoData from 'components/StoreInfoData'
+import Layout from 'components/Layout'
+import ProductCard from 'views/ProductCard'
 
 import styles from './style.module.css'
 
-const StoreHeader = () => {
-  return (
+const StorePage = () => (
+  <>
     <div className={styles.mainContainer}>
       <div className={styles.containerPicName}>
         <Image
@@ -35,7 +37,17 @@ const StoreHeader = () => {
         </p>
       </div>
     </div>
-  )
-}
 
-export default StoreHeader
+    <Layout type="product">
+      {Array(12).fill("").map((_, i) => (
+        <ProductCard
+          showStore={false}
+          resourceId={i+1}
+          key={i}
+        />
+      ))}
+    </Layout>
+  </>
+)
+
+export default StorePage

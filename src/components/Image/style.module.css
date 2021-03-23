@@ -9,9 +9,20 @@
   height: 150px;
 }
 
+.product {
+	width: 100%;
+}
+
 @media (min-width: 650px) {
 	.storeImage {
 		width: 180px;
 		height: 180px;
+	}
+}
+
+@media (min-width: 490px) {
+	.product {
+		width: 400px;
+		height: 400px;
 	}
 }

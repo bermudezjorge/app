@@ -7,23 +7,23 @@ import progressImport from './utils/progressimport'
 import FallBack from 'components/Fallback'
 
 const Home = progressImport(
-  import("./routesComponents/Home")
+  import("./Home")
 )
 
 const Search = progressImport(
-  import("./routesComponents/Search")
+  import("./Search")
 )
 
 const Me = progressImport(
-  import("./routesComponents/Me")
+  import("./Me")
 )
 
-const StorePage = progressImport(
-  import("./routesComponents/StorePage")
+const Store = progressImport(
+  import("./Store")
 )
 
-const ProductPage = progressImport(
-  import("./routesComponents/ProductPage")
+const Product = progressImport(
+  import("./Product")
 )
 
 const Routes = () => {  
@@ -37,8 +37,8 @@ const Routes = () => {
             <Route path="/search" component={Search} />
             <Route path="/me" component={Me} />
 
-            <Route path="/tienda/:name" component={StorePage} />
-            <Route path="/producto/:id" component={ProductPage} />
+            <Route path="/tienda/:name" component={Store} />
+            <Route path="/producto/:id" component={Product} />
 
             <Route path="/:rest*">
               {({rest}) => <FallBack type="notFound" page={rest} />}

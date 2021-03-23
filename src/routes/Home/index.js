@@ -4,7 +4,7 @@ import ProductCard from 'views/ProductCard'
 const Home = () => {
   return (
     <Layout type="product">
-      {Array(20).fill("").map((_, i) => (
+      {Array(21).fill("").map((_, i) => (
         <ProductCard
           showStore={true}
           resourceId={i+1}

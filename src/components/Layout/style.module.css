@@ -4,11 +4,6 @@
   margin: 0 auto;
 }
 
-.store {
-  display: flex;
-  flex-direction: column;
-}
-
 .product {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
