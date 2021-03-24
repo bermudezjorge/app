@@ -1,5 +1,9 @@
+import {Helmet} from 'react-helmet'
+
 import Image from 'components/Image'
-import StoreInfoData from 'components/StoreInfoData'
+import FollowButton from 'components/FollowButton'
+import StoreData from 'components/StoreData'
+import Separator from 'components/Separator'
 import Layout from 'components/Layout'
 import ProductCard from 'views/ProductCard'
 
@@ -7,25 +11,33 @@ import styles from './style.module.css'
 
 const StorePage = () => (
   <>
+    <Helmet>
+      <title>Tienda</title>
+    </Helmet>
+    
     <div className={styles.mainContainer}>
       <div className={styles.containerPicName}>
         <Image
           type="storepic"
         />
         <h1 className={styles.name}>@storename1</h1>
+        
+        <FollowButton />
       </div>
 
       <div className={styles.containerData}>
         <ul className={styles.list}>
-          <StoreInfoData
+          <StoreData
             type="direction"
             text="Ciudad Bolívar, Sector Vista Hermosa"
           />
-          <StoreInfoData
+          <Separator />
+          <StoreData
             type="workinghours"
             text="8:00 am - 4:00 pm"
           />
-          <StoreInfoData
+          <Separator />
+          <StoreData
             type="phone"
             text="+5804124152478"
           />

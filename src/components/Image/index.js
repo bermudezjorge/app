@@ -39,6 +39,16 @@ const Image = ({src, resourceId, type}) => {
       />
 		)	
 	}
+
+	if(type === "productstorelink") {
+		return (
+      <img
+      	className={styles.productstorelink}
+      	src="https://picsum.photos/200"
+      	alt="tienda logo"
+      />
+		)	
+	}
 }
 
 // export default connect(mapStateToProps, mapDispatchToProps)(Image)

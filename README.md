@@ -19,3 +19,4 @@ App aimed to learn, implement all new stuffs in front-end development and be sim
 ## TODO
 
 - A LOT
+- Refacto Image component

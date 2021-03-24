@@ -13,6 +13,11 @@
 	width: 100%;
 }
 
+.productstorelink {
+	width: 24px;
+	height: 24px;
+}
+
 @media (min-width: 650px) {
 	.storeImage {
 		width: 180px;

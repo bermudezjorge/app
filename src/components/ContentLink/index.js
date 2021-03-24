@@ -2,7 +2,7 @@ import {Link, useRoute} from 'wouter'
 
 import styles from './style.module.css'
 
-const NavLink = ({shown, to, icon, image}) => {
+const ContentLink = ({shown, to, icon, image, store}) => {
   const [match] = useRoute(to)
 
   const isActive = () => match ? styles.active : ''
@@ -26,4 +26,4 @@ const NavLink = ({shown, to, icon, image}) => {
   )
 }
 
-export default NavLink
+export default ContentLink

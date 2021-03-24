@@ -19,7 +19,7 @@ const LI = ({emoji, text, link}) => (
   </li>
 )
 
-const StoreInfoData = ({type, text}) => {
+const StoreData = ({type, text}) => {
 
   switch(type) {
     case "direction": {
@@ -58,4 +58,4 @@ const StoreInfoData = ({type, text}) => {
   }
 }
 
-export default StoreInfoData
+export default StoreData

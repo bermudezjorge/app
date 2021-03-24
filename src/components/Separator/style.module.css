@@ -1,0 +1,7 @@
+.separator {
+	width: 1px;
+	height: 30px;
+	background: var(--separator-color);
+	margin: 0 1rem;
+	padding-right: 1px;
+}
