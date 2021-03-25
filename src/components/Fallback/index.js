@@ -1,13 +1,15 @@
 import loadingImg from 'assets/img/fallback/Online_shopping_SVG.svg'
 import notFoundImg from 'assets/img/fallback/Error_404_SVG.svg'
 import errorPageImg from 'assets/img/fallback/Error_notification_SVG.svg'
+import searchImg from 'assets/img/fallback/Search_SVG.svg'
 
 import styles from './style.module.css'
 
 const IMG_TYPE = {
   loading: loadingImg,
   notFound: notFoundImg,
-  error: errorPageImg
+  error: errorPageImg,
+  noResult: searchImg
 }
 
 const H1 = ({children}) => (
@@ -23,14 +25,20 @@ const FallBackText = ({type, page}) => {
   if(type === 'error')
     return <H1>Ha ocurrido un error, recargue la pagina.</H1>
 
-  return <H1>Cargando...</H1>
+  if(type === 'loading')
+    return <H1>Cargando...</H1>
+
+  return <H1>Sin resultado</H1>
 }
 
 const FallBack = ({type, page}) => (
-  <div className={styles.container}>
+  <div
+    className={styles.container}
+    style={type === 'noResult' ? {height: 'auto'} : {}}
+  >
     <img
       src={IMG_TYPE[type]}
-      alt="cargando..."
+      alt="cargando"
       className={styles.img}
     />
 

@@ -9,6 +9,7 @@
 
 .img {
   width: 50%;
+  max-width: 250px;
 }
 
 .text {
@@ -18,10 +19,4 @@
   margin-top: 1rem;
   text-align: center;
   color: var(--text-color);
-}
-
-@media (min-width: 650px) {
-  .img {
-    width: 250px;
-  }
 }

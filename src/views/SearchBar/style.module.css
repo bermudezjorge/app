@@ -1,0 +1,34 @@
+.container {
+	width: 100%;
+	max-width: 200px;
+}
+
+.searchBar {
+	width: 100%;
+	height: 30px;
+	padding: 0 0.5rem 0 1rem;
+	border: 1px solid var(--border-color);
+	background: var(--elements-bg);
+	outline: none;
+}
+
+.searchBar:focus {
+	border-color: var(--main-color);
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 0.5rem;
+}
+
+.menuBtn {
+	height: 20px;
+	padding: 0 0.5rem;
+	background: var(--elements-bg);
+	border: 1px solid var(--border-color);
+	font-weight: 100;
+	font-size: 0.7rem;
+	cursor: pointer;
+}
