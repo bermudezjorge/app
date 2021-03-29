@@ -10,6 +10,7 @@
   background: var(--navbar-color);
   padding: 0 2rem;
   border-top: 1px solid var(--border-color);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 @media (min-width: 650px) {

@@ -1,32 +1,75 @@
 import {useState} from 'react'
 
+import Button from 'components/Button'
+
 import styles from './style.module.css'
 
-const SearchBar = ({onChange}) => {
-	const [show, setShow] = useState(false)
+const BTN_NAMES = {
+	option1: 'cerca',
+	option2: 'barato'
+}
 
-	const handleOnChange = ({target}) => {
-		onChange(target.value)
+const SearchBar = ({setSearch}) => {
+	const [text, setText] = useState('')
+	const [showMenu, setShowMenu] = useState(false)
 
-		if(target.value === '') {
-			setShow(false)
+	const handleOnChange = (e) => {
+		if(e.target.value === '') {
+			setText('')
+			setShowMenu(false)
 		} else {
-			setShow(true)
+			setText(e.target.value)
+			setShowMenu(true)
 		}
+	}
+
+	const handleClick = (e) => {
+		e.preventDefault()
+		setSearch(text)
+		setShowMenu(false)
+	}
+
+	const clearSearch = (e) => {
+		e.preventDefault()
+		setText('')
+		setShowMenu(false)
 	}
 
 	return (
 		<form className={styles.container}>
-			<input
-				type="text"
-				placeholder="Buscar producto por..."
-				className={styles.searchBar}
-				onChange={handleOnChange}
-			/>
-			{show && (
+			<div className={styles.searchBarContainer}>
+				<input
+					type="text"
+					placeholder="Buscar producto por..."
+					className={styles.searchBar}
+					value={text}
+					onChange={handleOnChange}
+				/>
+				{
+					!!text && (
+						<Button
+							type="closeButton"
+							text="&times;"
+							onClick={clearSearch}
+						/>
+					)
+				}
+			</div>
+
+			{showMenu && (
 				<div className={styles.menu}>
-					<button className={styles.menuBtn}>cercania</button>
-					<button className={styles.menuBtn}>economico</button>
+					<button
+						className={styles.menuBtn}
+						onClick={handleClick}
+					>
+						{BTN_NAMES.option1}
+					</button>
+					<button
+						className={styles.menuBtn}
+						onClick={handleClick}
+					>
+						{BTN_NAMES.option2}
+					</button>
 				</div>
 			)}
 		</form>

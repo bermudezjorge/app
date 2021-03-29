@@ -1,9 +1,10 @@
 import {Suspense} from 'react'
 import {Switch, Route} from 'wouter'
 
+import progressImport from 'utils/progressimport'
+
 import Layout from 'components/Layout'
 import ErrorBoundary from 'components/ErrorBoundary'
-import progressImport from './utils/progressimport'
 import FallBack from 'components/Fallback'
 
 const Home = progressImport(

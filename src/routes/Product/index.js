@@ -1,7 +1,7 @@
 import {Helmet} from 'react-helmet'
 import {useRoute} from 'wouter'
 
-import FollowButton from 'components/FollowButton'
+import Button from 'components/Button'
 import Image from 'components/Image'
 import ContentLink from 'components/ContentLink'
 
@@ -13,7 +13,7 @@ const ProductPage = () => {
   return (
     <>
       <Helmet>
-        <title>Producto</title>
+        <title>Nombre producto | Producto</title>
       </Helmet>
 
       <div className={styles.mainContainer}>
@@ -25,7 +25,10 @@ const ProductPage = () => {
     	        image="https://picsum.photos/200"
     	      />
           </div>
-          <FollowButton />
+          <Button
+            text="follow"
+            type="followEditButton"
+          />
         </div>
 
         <Image

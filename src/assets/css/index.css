@@ -2,12 +2,14 @@
   --main-color: #0095f6;
   --background-color: #f5f5f5;
   --elements-bg: #fff;
-  --text-color: #262626;
-  --text2-color: #353333;
+  --primary-text-color: #070707;
+  --secondary-text-color: #333;
+  --price-text-color: #fff;
   --separator-color: #ccc;
   --navbar-height: 2.5rem;
   --navbar-color: #fff;
   --border-color: #dbdbdb;
+  --border-radius: 7px;
   --skeleton-background-color: #efefef;
 }
 
@@ -27,4 +29,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.ReactModal__Overlay {
+  background: #0000008c !important;
 }

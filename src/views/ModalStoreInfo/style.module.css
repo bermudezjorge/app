@@ -1,0 +1,51 @@
+.modal {
+  width: 300px;
+  background: var(--elements-bg);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+	border-radius: var(--border-radius);
+}
+
+.modalTitle {
+	font-size: 1.3rem;
+  color: var(--secondary-text-color);
+}
+
+.form {
+	margin-top: 2rem;
+}
+
+.group {
+	padding: 1rem 0;
+}
+
+.groupMessage {
+	color: var(--secondary-text-color);
+	font-size: 0.75rem;
+	font-weight: 900;
+	margin-bottom: 0.4rem;
+}
+
+.input {
+	width: 100%;
+	padding: 0.4rem 0.5rem 0.4rem 1rem;
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+	margin-bottom: 1rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: var(--primary-text-color)
+}
+
+@media (min-width: 650px) {
+	.modal {
+		width: 500px;
+	}
+}

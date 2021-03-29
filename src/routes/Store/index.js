@@ -1,7 +1,7 @@
 import {Helmet} from 'react-helmet'
 
 import Image from 'components/Image'
-import FollowButton from 'components/FollowButton'
+import Button from 'components/Button'
 import StoreData from 'components/StoreData'
 import Separator from 'components/Separator'
 import Layout from 'components/Layout'
@@ -12,7 +12,7 @@ import styles from './style.module.css'
 const StorePage = () => (
   <>
     <Helmet>
-      <title>Tienda</title>
+      <title>@storename1 | Tienda</title>
     </Helmet>
     
     <div className={styles.mainContainer}>
@@ -22,7 +22,10 @@ const StorePage = () => (
         />
         <h1 className={styles.name}>@storename1</h1>
         
-        <FollowButton />
+        <Button
+          text="follow"
+          type="followEditButton"
+        />
       </div>
 
       <div className={styles.containerData}>

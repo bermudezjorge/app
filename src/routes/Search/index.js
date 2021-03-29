@@ -21,7 +21,7 @@ const Search = () => {
 	    </Helmet>
 
 	    <div className={styles.container}>
-		    <SearchBar onChange={setSearch} />
+		    <SearchBar setSearch={setSearch} />
 		    
 		    <div className={styles.results}>
 			    {search ? (
