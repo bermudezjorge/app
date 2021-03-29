@@ -2,7 +2,7 @@ import {Link, useRoute} from 'wouter'
 
 import styles from './style.module.css'
 
-const ContentLink = ({to, image}) => {
+const ContentLink = ({to, img}) => {
   const [match] = useRoute(to)
 
   const isActive = () => match ? styles.active : ''
@@ -10,7 +10,7 @@ const ContentLink = ({to, image}) => {
   return (
     <Link to={to}>
       <div className={`${styles.link} ${isActive()}`}>
-        <img className={styles.img} src={image} alt="profile" />
+        <img className={styles.img} src={img} alt="profile" />
       </div>
     </Link>
   )

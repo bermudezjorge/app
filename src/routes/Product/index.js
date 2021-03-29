@@ -1,9 +1,8 @@
 import {Helmet} from 'react-helmet'
-import {useRoute} from 'wouter'
+import {Link, useRoute} from 'wouter'
 
 import Button from 'components/Button'
 import Image from 'components/Image'
-import ContentLink from 'components/ContentLink'
 
 import styles from './style.module.css'
 
@@ -18,13 +17,19 @@ const ProductPage = () => {
 
       <div className={styles.mainContainer}>
         <div className={styles.header}>
-          <div className={styles.storeContainer}>
-          	<h3>@nombretienda</h3>
-          	<ContentLink
+          <Link
+            to="/tienda/3"
+            className={styles.storeContainer}
+          >
+          	<h3 className={styles.storeName}>
+              @nombretienda
+            </h3>
+          	<Image
     	        to="/tienda/1"
+              type="productstorelink"
     	        image="https://picsum.photos/200"
     	      />
-          </div>
+          </Link>
           <Button
             text="follow"
             type="followEditButton"
