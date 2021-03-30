@@ -1,22 +1,21 @@
-# Modern APP
-
-App aimed to learn, implement all new stuffs in front-end development and be simple af.
+# just an APP
+> _App aimed to learn, implement all new stuffs in front-end development and be simple af.
 
 ## Front-end Tech stack
 
 - React
 - React-helmet
+- TypeScript
 - Redux
 - Css modules
-- React query
 
 ## Backend-end Tech stack
 
 - Nodejs
-- Express
 - Firabase
+- Algolia
 
 ## TODO
 
 - A LOT
-- Refacto Image component
+- Refactor StoreData

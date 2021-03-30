@@ -1,6 +1,7 @@
 import {useState} from 'react'
 
 import Button from 'components/Button'
+import Input from 'components/Input'
 
 import styles from './style.module.css'
 
@@ -38,10 +39,9 @@ const SearchBar = ({setSearch}) => {
 	return (
 		<form className={styles.container}>
 			<div className={styles.searchBarContainer}>
-				<input
+				<Input
 					type="text"
 					placeholder="Buscar producto por..."
-					className={styles.searchBar}
 					value={text}
 					onChange={handleOnChange}
 				/>

@@ -1,0 +1,47 @@
+.fallback {
+  width: 50%;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.groupMessage {
+	color: var(--secondary-text-color);
+	font-size: 0.75rem;
+	font-weight: 900;
+	margin-bottom: 0.4rem;
+}
+
+.storeData {
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--secondary-text-color);
+}
+
+.link {
+  color: var(--main-color) !important;
+}
+
+.profileName {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.description {
+  width: 100%;
+  font-size: 0.8rem;
+  margin-top: 3rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  color: var(--price-text-color);
+}

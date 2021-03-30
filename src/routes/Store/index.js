@@ -1,5 +1,6 @@
 import {Helmet} from 'react-helmet'
 
+import Text from 'components/Text'
 import Image from 'components/Image'
 import Button from 'components/Button'
 import StoreData from 'components/StoreData'
@@ -20,7 +21,7 @@ const StorePage = () => (
         <Image
           type="storepic"
         />
-        <h1 className={styles.name}>@storename1</h1>
+        <Text type="profileName">@storename1</Text>
         
         <Button
           text="follow"
@@ -31,25 +32,25 @@ const StorePage = () => (
       <div className={styles.containerData}>
         <ul className={styles.list}>
           <StoreData
-            type="direction"
+            emoji="🌎"
             text="Ciudad Bolívar, Sector Vista Hermosa"
           />
           <Separator />
           <StoreData
-            type="workinghours"
+            emoji="⌚"
             text="8:00 am - 4:00 pm"
           />
           <Separator />
           <StoreData
-            type="phone"
+            emoji="📱"
             text="+5804124152478"
           />
         </ul>
 
-        <p className={styles.description}>
+        <Text type="description">
           Lorem ipsum dolor sit amet consectetur adipisicing
           elit. Saepe cumque. xd xd xd.
-        </p>
+        </Text>
       </div>
     </div>
 

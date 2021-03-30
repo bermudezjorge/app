@@ -1,12 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
 // import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'
 
 import store from './store'
-
 import App from './App'
-
 import './assets/css/index.css'
 
 ReactDOM.render(

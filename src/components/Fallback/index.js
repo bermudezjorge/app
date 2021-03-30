@@ -1,3 +1,5 @@
+import Text from '../Text'
+
 import loadingImg from 'assets/img/fallback/Online_shopping_SVG.svg'
 import notFoundImg from 'assets/img/fallback/Error_404_SVG.svg'
 import errorPageImg from 'assets/img/fallback/Error_notification_SVG.svg'
@@ -12,23 +14,17 @@ const IMG_TYPE = {
   noResult: searchImg
 }
 
-const H1 = ({children}) => (
-  <h1 className={styles.text}>
-    {children}
-  </h1>
-)
-
 const FallBackText = ({type, page}) => {
   if(type === 'notFound')
-    return <H1>No se ha encontrado la pagina "<b>{page}</b>", intente otra ruta.</H1>
+    return <Text type="fallback">No se ha encontrado la pagina "<b>{page}</b>", intente otra pagina.</Text>
 
   if(type === 'error')
-    return <H1>Ha ocurrido un error, recargue la pagina.</H1>
+    return <Text type="fallback">Ha ocurrido un error, recargue la pagina.</Text>
 
   if(type === 'loading')
-    return <H1>Cargando...</H1>
+    return <Text type="fallback">Cargando...</Text>
 
-  return <H1>Sin resultado</H1>
+  return <Text type="fallback">Sin resultado</Text>
 }
 
 const FallBack = ({type, page}) => (
